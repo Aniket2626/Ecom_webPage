@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>online shopping</title>
+<link rel="stylesheet" type="text/css" href="a3.css">
+
+
+<script type="text/javascript"align="middle">
+
+var image1=new Image()
+image1.src="i7.jpg"
+var image2=new Image()
+image2.src="i5.jpg"
+var image3=new Image()
+image3.src="i6.jpg"
+var image4=new Image()
+image4.src="slide1.jpg"
+
+
+</script>
+
+
+
+</head>
+<body bgcolor"#81a9eb">
+
+<header>
+
+</div>
+	
+<div id="logo"><img src="logo.jpg" alt="logo"  width="200"height="70"><span>BRAND STORE</span></div>
+<ul>
+	<li><a href="home.html">HOME</a></li>
+	<li><a href="apparels.html">APPARELS</a></li>
+	
+	<li><a href="watch.html">WATCHES</a></li>
+	
+	 <li style="float: right" font color="black">
+  <font size="4"> <td><a href="login.html">REGISTER</a></td></font></li>
+</ul>
+</header>
+<main>
+
+ 
+
+<img src="" name="slide" width="1560" height="650">
+
+<script>
+
+//variable that will increment through the images
+var step=1
+function slideit(){
+//if browser does not support the image object, exit.
+if (!document.images)
+return
+document.images.slide.src=eval("image"+step+".src")
+if (step<4)
+step++
+else
+step=1
+//call function "slideit()" every 2.5 seconds
+setTimeout("slideit()",1200)
+}
+slideit()
+
+</script>
+<font color="black"> <br>
+<br>
+<p><div style="text-align: left"><h3><b>DISCLAIMER:-</b></h3></p> 
+<font color="grey"> <b>MANISH MALHOTRA COLLECTION</b> 
+The details of the products or product specifications (weight, colour, handwork details, size, etc.) as mentioned on brandstore, are only approximate values.
+<p>
+	
+Products on BRAND STORE are designer made, hand crafted and hand picked from various parts of India. Due to the intricate nature of the products available on our website, we make sure that what you see is as close to the real thing as possible. However, there may be slight variations in the colors of fabrics, dyes, prints or embroideries of the image you see on your monitor and the actual product. This is due to the nature of fabric dyes, weather at the time of dying and differences in display outputs due to lighting,color settings and capabilities of computer monitors.
+<p>
+<div style="text-align: left">We do not endorse and are not responsible for
+</p>
+(A) THE ACCURACY OR RELIABILITY OF ANY OPINION, ADVICE OR STATEMENT MADE THROUGH THE SITE BY ANY PARTY OTHER THAN US,
+<p>
+(B) ANY CONTENT PROVIDED ON LINKED SITES OR
+<p>
+(C) THE CAPABILITIES OR RELIABILITY OF ANY PRODUCT OR SERVICE OBTAINED FROM A LINKED SITE.
+<p>
+<br>
+</body>
+</html>
+

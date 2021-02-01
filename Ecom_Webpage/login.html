@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>online shopping</title>
+<link rel="stylesheet" type="text/css" href="a3.css">
+<style>
+	header{
+	margin-bottom: 0;
+	background-color: #00cccc;
+	border-bottom: black 2px solid;
+	color: #b8cff5;
+	font-family: verdanas;
+	}
+	div{
+  background-color: lightgrey;
+  width: 420px;
+  border: 10px solid grey;
+  padding: 100px;
+  margin: 50px;
+
+
+}
+</style>
+</head>
+<body>
+
+<header>
+
+<font color="black">
+	
+<dr id="logo"><img src="logo.jpg" alt="logo"  width="200"height="70"><span>BRAND STORE</span></dr>
+<ul>
+	<li><a href="home.html">HOME</a></li>
+	<li><a href="apparels.html">APPARELS</a></li>
+	
+	<li><a href="watch.html">WATCHES</a></li>
+	
+</ul>
+</header>
+
+<center>
+
+
+<div class="lg">
+
+
+
+<b> LOGIN DETAILS</b>
+<br><br>
+
+<form name="Regform" method="post" onsubmit="return valid()">
+	Name:<br>
+    <input type="text" name="name" placeholder="Enter User Name" >
+   
+
+<br>Mobile:<br>
+	<input type="text" name="mob" placeholder="Enter Your Password">
+<br>Email:<br>
+	<input type="text" name="email" placeholder="Email ID">	
+<br>Password:<br>
+	<input type="Password" name="pass" placeholder="Enter Your Password">	
+<br>Confirm Password:<br>
+	<input type="Password" name="cpass" placeholder="Enter Your Password">
+	
+
+<br>
+
+<button type="submit" >SUBMIT</button>
+<br>
+<br>
+<small>By continuing, you agree to Brand store's Conditions of Use and Privacy Notice.</small></b>
+</form>
+</div>
+
+ <script type="text/javascript">
+    
+    function valid()
+    {
+
+      var user = document.forms["Regform"]["name"].value
+      var phone = document.forms["Regform"]["mob"].value
+      var mail = document.forms["Regform"]["email"].value
+      var pass = document.forms["Regform"]["pass"].value
+      var cpass= document.forms["Regform"]["cpass"].value
+
+      var emailfilter=/^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/
+      var b=emailfilter.test(document.Regform.email.value);
+
+
+          if(user=="")
+          {
+             //document.getElementById('uname').innerHTML = "Please Enter Username";
+             window.alert("Enter Username");
+             document.getElementById("name").focus();
+            return false;
+          }
+
+          if(phone=="")
+          {
+            alert("Enter Mobile number");
+            document.getElementById("mob").focus();
+            return false;
+          } 
+
+          else if(phone.length<10)
+          {
+            alert("Enter 10 digit Mobile number");
+            return false;
+          } 
+
+          else if(isNaN(phone))
+          {
+            alert("Enter digits only");
+            return false;
+          }
+
+          if(mail=="")
+          {
+            alert("Enter Email Id");
+            document.getElementById("email").focus();
+            return false;
+          }  
+
+          else if(b==false)
+          {
+              alert("enter valid email");
+              return false;
+          }  
+
+          if(pass=="")
+          {
+            alert("Enter password");
+            document.getElementById("pass").focus();
+            return false;
+          }
+
+          if(cpass=="")
+          {
+            alert("Confirm your password");
+            document.getElementById("cpass").focus();
+            return false;
+          } 
+
+          else if(cpass != pass)
+          {
+            alert("Enter Correct Password");
+            return false;
+          }  
+
+          else
+          {
+            alert("thank you");
+            return true;
+          } 
+         
+    }
+
+
+  </script>
+
+
+</body>
+</html>
